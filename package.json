@@ -1,0 +1,31 @@
+{
+  "name": "bug_hunter",
+  "version": "0.1.0",
+  "description": "a Proof of Concept for the Acts Project",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w",
+    "prestart": "npm run build",
+    "start": "node ./dist/index.js"
+  },
+  "author": "Markus Gilg",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "acts": "2.5.0",
+    "sqlite3": "4.0.4",
+    "sequelize": "4.42.0",
+    "sequelize-typescript": "0.6.6",
+    "reflect-metadata": "0.1.12"
+  },
+  "devDependencies": {
+    "ts-node": "7.0.1",
+    "nyc": "13.1.0",
+    "chai": "4.2.0",
+    "mocha": "5.2.0",
+    "typescript": "3.2.2",
+    "@types/node": "10.12.18",
+    "@types/mocha": "5.2.5",
+    "@types/chai": "4.1.7"
+  }
+}
