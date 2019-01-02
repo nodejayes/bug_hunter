@@ -1,19 +1,23 @@
-import {createServer} from 'acts';
+import {createServer}   from 'acts';
+import {TokenGenerator} from './utils/token.generator';
 
 const ADDRESS = 'localhost';
 const PORT = 8084;
 
 export class ApplicationServer {
-  constructor(path: string, private server = createServer(path, {
-    server: {
-      address: ADDRESS,
-      port: PORT,
-      webroot: 'public'
-    }
-  }, [])) {
+  constructor(path: string,
+              private server = createServer(path, {
+                server: {
+                  address: ADDRESS,
+                  port: PORT,
+                  webroot: 'public'
+                }
+              }, []),
+              private tokenGenerator = new TokenGenerator()) {
   }
 
   async start() {
+    this.server.setAuthentication(this.authenticate.bind(this));
     await this.server.start(() => {
       console.info(`Server is running at ${ADDRESS}:${PORT}`);
     });
@@ -21,5 +25,28 @@ export class ApplicationServer {
 
   async stop() {
     await this.server.shutdownInstances();
+  }
+
+  private async authenticate(req, res, next) {
+    const TOKEN = req.headers.bughuntertoken;
+    if (!TOKEN && req.originalUrl.startsWith('/api/login/request')) {
+      next();
+      return;
+    } else if (TOKEN) {
+      req.tokenInfo = this.tokenGenerator.verify(TOKEN);
+      req.hasRight = (right: string): boolean => {
+        if (!req.tokenInfo || !req.tokenInfo.user.Group || req.tokenInfo.user.Group.Rights.length < 1) {
+          return false;
+        }
+        return !!req.tokenInfo.user.Group.Rights.filter(r => r.Title === right)[0];
+      };
+      req.isGroup = (groupId: number): boolean => {
+        return req.tokenInfo && req.tokenInfo.user && req.tokenInfo.user.Group ? req.tokenInfo.user.Group.Id === groupId : false;
+      };
+      next();
+      return;
+    }
+    res.statusCode = 403;
+    res.end('');
   }
 }

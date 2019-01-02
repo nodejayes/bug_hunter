@@ -1,6 +1,7 @@
 import {User}           from '../models/user';
 import {CrudRepository} from './base/crud';
 import {Group}          from '../models/group';
+import {Right}          from '../models/right';
 
 /**
  * handle the Data Access of User
@@ -26,7 +27,10 @@ export class UserRepository extends CrudRepository<User> {
    * @param password the Password Hash for the User
    */
   async getUserByLoginData(userName: string, password: string): Promise<User> {
-    const foundUser = (await this.readAll({where:{UserName: userName, Password: password}, limit: 1}))[0];
+    const foundUser = (await User.findAll({
+      include: [{model: Group, include: [Right]}],
+      where:{UserName: userName, Password: password},
+      limit: 1}))[0];
     if (!foundUser) {
       throw new Error(`can not find user: ${userName}`);
     }

@@ -16,7 +16,8 @@
     "sqlite3": "4.0.4",
     "sequelize": "4.42.0",
     "sequelize-typescript": "0.6.6",
-    "reflect-metadata": "0.1.12"
+    "reflect-metadata": "0.1.12",
+    "jsonwebtoken": "8.4.0"
   },
   "devDependencies": {
     "ts-node": "7.0.1",
@@ -26,6 +27,7 @@
     "typescript": "3.2.2",
     "@types/node": "10.12.18",
     "@types/mocha": "5.2.5",
-    "@types/chai": "4.1.7"
+    "@types/chai": "4.1.7",
+    "@types/jsonwebtoken": "8.3.0"
   }
 }

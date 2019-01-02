@@ -22,7 +22,7 @@ export class CrudApi<T extends Model<T>> {
         .catch((err) => {
           console.error(err);
           res.statusCode = 500;
-          res.send('Internal Server Error');
+          res.end('Internal Server Error');
         });
     },
     POST: async (req, res, next) => {
@@ -31,7 +31,7 @@ export class CrudApi<T extends Model<T>> {
         .catch((err) => {
           console.error(err);
           res.statusCode = 500;
-          res.send('Internal Server Error');
+          res.end('Internal Server Error');
         });
     },
     PUT: async (req, res, next) => {
@@ -40,7 +40,7 @@ export class CrudApi<T extends Model<T>> {
         .catch((err) => {
           console.error(err);
           req.statusCode = 500;
-          res.send('Internal Server Error');
+          res.end('Internal Server Error');
         });
     },
     DELETE: async (req, res, next) => {
@@ -49,7 +49,7 @@ export class CrudApi<T extends Model<T>> {
         .catch((err) => {
           console.error(err);
           req.statusCode = 500;
-          res.send('Internal Server Error');
+          res.end('Internal Server Error');
         });
     },
     GET_BY_ID: async (req, res, next) => {
@@ -58,7 +58,7 @@ export class CrudApi<T extends Model<T>> {
         .catch((err) => {
           console.error(err);
           req.statusCode = 500;
-          res.send('Internal Server Error');
+          res.end('Internal Server Error');
         });
     }
   }
