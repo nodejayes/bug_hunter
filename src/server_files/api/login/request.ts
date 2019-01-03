@@ -1,5 +1,6 @@
 import {UserRepository} from '../../../repositories/user.repository';
 import {TokenGenerator} from '../../../utils/token.generator';
+import {ILoginResult}   from '../../../../shared/communication/login-result';
 
 const REPOSITORY = new UserRepository();
 const TOKEN_GENERATOR = new TokenGenerator();
@@ -17,7 +18,7 @@ export async function GET(req, res, next) {
     userId: USER.Id,
     time: Date.now(),
   }, USER);
-  next({
+  next(<ILoginResult>{
     token: TOKEN,
     user: USER,
   });
