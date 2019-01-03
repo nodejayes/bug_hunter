@@ -28,7 +28,14 @@ export class ApplicationServer {
   }
 
   private async authenticate(req, res, next) {
+    // only protect api Route
+    if (!req.originalUrl.startsWith('/api')) {
+      next();
+      return;
+    }
+
     const TOKEN = req.headers.bughuntertoken;
+    // Request a Login are allowed for everyone
     if (!TOKEN && req.originalUrl.startsWith('/api/login/request')) {
       next();
       return;
