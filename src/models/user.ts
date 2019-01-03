@@ -12,10 +12,11 @@ import {
 import {Group}        from './group';
 import {Project}      from './project';
 import {ProjectUsers} from './project_users';
+import {IUser}        from '../../shared/models/user';
 
 @DefaultScope({})
 @Table({})
-export class User extends Model<User> {
+export class User extends Model<User> implements IUser {
   @PrimaryKey
   @AutoIncrement
   @Column

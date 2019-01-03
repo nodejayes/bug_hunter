@@ -10,10 +10,11 @@ import {
 }                     from 'sequelize-typescript';
 import {User}         from './user';
 import {ProjectUsers} from './project_users';
+import {IProject}     from '../../shared/models/project';
 
 @DefaultScope({})
 @Table({})
-export class Project extends Model<Project> {
+export class Project extends Model<Project> implements IProject {
   @PrimaryKey
   @AutoIncrement
   @Column

@@ -8,14 +8,15 @@ import {
   PrimaryKey,
   Sequelize,
   Table
-} from 'sequelize-typescript';
-import {User}                                                                              from './user';
-import {Right}                                                                             from './right';
-import {GroupRights}                                                                       from './group_rights';
+}                    from 'sequelize-typescript';
+import {User}        from './user';
+import {Right}       from './right';
+import {GroupRights} from './group_rights';
+import {IGroup}      from '../../shared/models/group';
 
 @DefaultScope({})
 @Table({})
-export class Group extends Model<Group> {
+export class Group extends Model<Group> implements IGroup {
   @AutoIncrement
   @PrimaryKey
   @Column

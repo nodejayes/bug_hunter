@@ -7,13 +7,14 @@ import {
   PrimaryKey,
   Sequelize,
   Table
-} from 'sequelize-typescript';
-import {Group}                                                                    from './group';
-import {GroupRights}                                                              from './group_rights';
+}                    from 'sequelize-typescript';
+import {Group}       from './group';
+import {GroupRights} from './group_rights';
+import {IRight}      from '../../shared/models/right';
 
 @DefaultScope({})
 @Table({})
-export class Right extends Model<Right> {
+export class Right extends Model<Right> implements IRight {
   @AutoIncrement
   @PrimaryKey
   @Column
