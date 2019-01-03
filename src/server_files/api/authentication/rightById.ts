@@ -10,11 +10,4 @@ REPO.ReadOptions = {
   include: [{model: Group, include: [User]}]
 };
 
-export const GET = (req, res, next) => {
-  if (req.hasRight('READ_RIGHT')) {
-    API.exportableApi.GET_BY_ID(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right READ_RIGHT');
-  }
-};
+export const GET = (req, res, next) => API.call(req, res, next, API.exportableApi.GET_BY_ID, ['READ_RIGHT', 'READ_GROUP', 'READ_USER']);

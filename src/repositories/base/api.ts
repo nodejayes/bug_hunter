@@ -62,4 +62,26 @@ export class CrudApi<T extends Model<T>> {
         });
     }
   }
+
+  call(req, res, next, cb, rights = []) {
+    let authorized = false;
+    if (rights.length > 0) {
+      for (const right of rights) {
+        if (!req.hasRight(right)) {
+          authorized = false;
+          break;
+        } else {
+          authorized = true;
+        }
+      }
+    } else {
+      authorized = true;
+    }
+    if (authorized) {
+      cb(req, res, next);
+    } else {
+      res.statusCode = 403;
+      res.end(`missing Right(s) ${JSON.stringify(rights)}`);
+    }
+  }
 }

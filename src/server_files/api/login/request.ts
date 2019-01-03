@@ -1,7 +1,5 @@
 import {UserRepository} from '../../../repositories/user.repository';
 import {TokenGenerator} from '../../../utils/token.generator';
-import {Group}          from '../../../models/group';
-import {Right}          from '../../../models/right';
 
 const REPOSITORY = new UserRepository();
 const TOKEN_GENERATOR = new TokenGenerator();

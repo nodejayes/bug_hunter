@@ -9,35 +9,7 @@ REPO.ReadOptions = {
   include: [Group]
 };
 
-export const GET = (req, res, next) => {
-  if (req.hasRight('READ_GROUP')) {
-    API.exportableApi.GET(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right READ_GROUP');
-  }
-};
-export const POST = (req, res, next) => {
-  if (req.hasRight('CREATE_GROUP')) {
-    API.exportableApi.POST(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right CREATE_GROUP');
-  }
-};
-export const PUT = (req, res, next) => {
-  if (req.hasRight('UPDATE_GROUP')) {
-    API.exportableApi.PUT(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right UPDATE_GROUP');
-  }
-};
-export const DELETE = (req, res, next) => {
-  if (req.hasRight('DELETE_GROUP')) {
-    API.exportableApi.DELETE(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right DELETE_GROUP');
-  }
-};
+export const GET = (req, res, next) => API.call(req, res, next, API.exportableApi.GET, ['READ_GROUP']);
+export const POST = (req, res, next) => API.call(req, res, next, API.exportableApi.POST, ['CREATE_GROUP']);
+export const PUT = (req, res, next) => API.call(req, res, next, API.exportableApi.PUT, ['UPDATE_GROUP']);
+export const DELETE = (req, res, next) => API.call(req, res, next, API.exportableApi.DELETE, ['DELETE_GROUP']);

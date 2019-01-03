@@ -12,11 +12,4 @@ REPO.ReadOptions = {
   ]
 };
 
-export const GET = (req, res, next) => {
-  if (req.hasRight('READ_USER')) {
-    API.exportableApi.GET_BY_ID(req, res, next);
-  } else {
-    res.statusCode = 403;
-    res.end('missing Right READ_USER');
-  }
-};
+export const GET = (req, res, next) => API.call(req, res, next, API.exportableApi.GET_BY_ID, ['READ_USER', 'READ_GROUP', 'READ_RIGHT']);
