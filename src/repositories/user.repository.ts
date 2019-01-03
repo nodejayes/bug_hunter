@@ -2,6 +2,7 @@ import {User}           from '../models/user';
 import {CrudRepository} from './base/crud';
 import {Group}          from '../models/group';
 import {Right}          from '../models/right';
+import {Project}        from '../models/project';
 
 /**
  * handle the Data Access of User
@@ -16,9 +17,23 @@ export class UserRepository extends CrudRepository<User> {
    * @param user the User Instance
    * @param group the Group Instance
    */
-  async addToGroup(user: User, group: Group) {
+  async addGroup(user: User, group: Group) {
     user.GroupId = group.Id;
     await user.save({validate: true, returning: true});
+  }
+
+  async addProjects(user: User, projects: Project[]) {
+    for (const project of projects) {
+      await user['addProject'](project);
+    }
+    await user.save({returning: true});
+  }
+
+  async removeProjects(user: User, projects: Project[]) {
+    for (const project of projects) {
+      await user['removeProject'](project);
+    }
+    await user.save({returning: true});
   }
 
   /**

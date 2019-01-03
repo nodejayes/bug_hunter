@@ -7,7 +7,7 @@ import {Right}          from '../models/right';
  * Repository to handle the Data Access to Groups
  */
 export class GroupRepository extends CrudRepository<Group> {
-  constructor(private _saveOptions = {validate: true, returning: true}) {
+  constructor() {
     super(Group);
   }
 
@@ -18,7 +18,7 @@ export class GroupRepository extends CrudRepository<Group> {
    */
   async addUser(user: User, group: Group) {
     user.GroupId = group.Id;
-    await user.save(this._saveOptions);
+    await user.save({validate: true, returning: true});
   }
 
   /**
@@ -30,7 +30,7 @@ export class GroupRepository extends CrudRepository<Group> {
     for (const right of rights) {
       await group[`addRight`](right);
     }
-    await group.save(this._saveOptions);
+    await group.save({validate: true, returning: true});
   }
 
   /**
@@ -42,6 +42,6 @@ export class GroupRepository extends CrudRepository<Group> {
     for (const right of rights) {
       await group[`removeRight`](right);
     }
-    await group.save(this._saveOptions);
+    await group.save({validate: true, returning: true});
   }
 }

@@ -1,6 +1,6 @@
 import {
   AutoIncrement,
-  BelongsTo,
+  BelongsTo, BelongsToMany,
   Column,
   DefaultScope,
   ForeignKey,
@@ -8,8 +8,10 @@ import {
   PrimaryKey,
   Sequelize,
   Table
-} from 'sequelize-typescript';
-import {Group}                                                                            from './group';
+}                     from 'sequelize-typescript';
+import {Group}        from './group';
+import {Project}      from './project';
+import {ProjectUsers} from './project_users';
 
 @DefaultScope({})
 @Table({})
@@ -39,4 +41,7 @@ export class User extends Model<User> {
 
   @BelongsTo(() => Group)
   Group: Group;
+
+  @BelongsToMany(() => Project, {through: () => ProjectUsers})
+  Projects: Project[];
 }
