@@ -12,7 +12,7 @@
   "author": "Markus Gilg",
   "license": "Apache-2.0",
   "dependencies": {
-    "acts": "2.5.0",
+    "acts": "2.5.2",
     "sqlite3": "4.0.4",
     "sequelize": "4.42.0",
     "sequelize-typescript": "0.6.6",
