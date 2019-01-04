@@ -1,6 +1,10 @@
-<div>
-  isBusy: {{this.userState.IsBusy$ | async}}
-  currentUser: {{this.userState.CurrentUser$ | async}}
-  accessToken: {{this.userState.AccessToken$ | async}}
-  <router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="header">
+    <app-header></app-header>
+  </div>
+  <div class="content">
+    <router-outlet></router-outlet>
+  </div>
+  <div class="left-sidebar"></div>
+  <div class="right-sidebar"></div>
 </div>
