@@ -3,6 +3,10 @@ import {TokenGenerator} from './utils/token.generator';
 
 const ADDRESS = 'localhost';
 const PORT = 8084;
+const ALLOWED_FILE_EXTENSIONS = [
+  'webpage',
+  '.woff', '.woff2', '.ico', '.ttf', '.svg', '.eot',
+];
 
 export class ApplicationServer {
   constructor(path: string,
@@ -10,7 +14,8 @@ export class ApplicationServer {
                 server: {
                   address: ADDRESS,
                   port: PORT,
-                  webroot: 'public'
+                  webroot: 'public',
+                  allowedExtensions: ALLOWED_FILE_EXTENSIONS
                 }
               }, []),
               private tokenGenerator = new TokenGenerator()) {

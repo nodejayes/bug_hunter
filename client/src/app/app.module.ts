@@ -6,12 +6,14 @@ import { AppComponent }     from './app.component';
 import {BackendApiModule}   from './backend-api/backend-api.module';
 import { PageNotFoundComponent } from './pages/page-not-found/page-not-found.component';
 import { HeaderComponent } from './components/header/header.component';
+import { LogoComponent } from './components/header/logo/logo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageNotFoundComponent,
-    HeaderComponent
+    HeaderComponent,
+    LogoComponent
   ],
   imports: [
     BrowserModule,
