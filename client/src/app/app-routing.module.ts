@@ -8,6 +8,18 @@ const routes: Routes = [
     loadChildren: './login/login.module#LoginModule'
   },
   {
+    path: 'settings',
+    loadChildren: './settings/settings.module#SettingsModule',
+  },
+  {
+    path: 'tickets',
+    loadChildren: './ticket/ticket.module#TicketModule',
+  },
+  {
+    path: 'dashboard',
+    loadChildren: './dashboard/dashboard.module#DashboardModule'
+  },
+  {
     path: '',
     pathMatch: 'full',
     loadChildren: './dashboard/dashboard.module#DashboardModule'
