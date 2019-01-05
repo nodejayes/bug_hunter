@@ -1,3 +1,22 @@
-<p>
-  login-page works!
-</p>
+<p-card>
+  <p-header>
+    <p>Anmeldung</p>
+  </p-header>
+  <form [formGroup]="loginForm" (ngSubmit)="submitLoginForm()">
+    <div class="ui-g ui-fluid">
+      <div class="ui-g-12">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-user"></i></span>
+          <input type="text" pInputText placeholder="Benutzername" [formControl]="userName">
+        </div>
+      </div>
+      <div class="ui-g-12">
+        <div class="ui-inputgroup">
+          <span class="ui-inputgroup-addon"><i class="fa fa-key"></i></span>
+          <input type="password" pInputText placeholder="Passwort" [formControl]="password">
+        </div>
+      </div>
+    </div>
+    <button pButton type="submit" label="Anmelden"></button>
+  </form>
+</p-card>

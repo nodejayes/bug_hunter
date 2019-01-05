@@ -4,13 +4,26 @@
     <list default="true" id="c303ba72-5a82-490b-bed4-7227bd98b067" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/client/src/app/settings/settings-routing.module.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/client/src/app/ticket/ticket-routing.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/server_files/api/authentication/userByToken.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app-routing.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/backend-api/api.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/backend-api/api.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/backend-api/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/backend-api/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/components/header/header-toolbar/header-toolbar.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/header/header-toolbar/header-toolbar.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/components/header/header-toolbar/header-toolbar.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/header/header-toolbar/header-toolbar.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/client/src/app/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/login/pages/login-page/login-page.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/pages/login-page/login-page.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/login/pages/login-page/login-page.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/login/pages/login-page/login-page.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/app/states/user.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/app/states/user.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/environments/environment.prod.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/repositories/base/api.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/repositories/base/api.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,7 +35,53 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/server_files/api/authentication/userByToken.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="23">
+              <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="145">
+              <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+              <folding>
+                <element signature="e#0#36#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/repositories/base/api.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+              <folding>
+                <element signature="e#0#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/server_files/api/authentication/userById.ts">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="322">
+              <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="136" />
+              <folding>
+                <element signature="e#0#62#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -63,7 +122,6 @@
         <option value="$PROJECT_DIR$/dist/server_files/api/login/login.js" />
         <option value="$PROJECT_DIR$/dist/server.js" />
         <option value="$PROJECT_DIR$/src/utils/token.generator.ts" />
-        <option value="$PROJECT_DIR$/src/repositories/base/api.ts" />
         <option value="$PROJECT_DIR$/src/server_files/api/authentication/right.ts" />
         <option value="$PROJECT_DIR$/src/server_files/api/authentication/rightById.ts" />
         <option value="$PROJECT_DIR$/src/server_files/api/authentication/user.ts" />
@@ -96,6 +154,8 @@
         <option value="$PROJECT_DIR$/tsconfig.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/src/index.ts" />
+        <option value="$PROJECT_DIR$/src/repositories/base/api.ts" />
+        <option value="$PROJECT_DIR$/src/server_files/api/authentication/userByToken.ts" />
       </list>
     </option>
   </component>
@@ -123,18 +183,11 @@
             <path>
               <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
               <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
               <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="server_files" type="462c0819:PsiDirectoryNode" />
             </path>
@@ -142,6 +195,22 @@
               <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
               <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server_files" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="server_files" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="authentication" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bug_hunter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bug_hunter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -234,7 +303,7 @@
       <workItem from="1546541852536" duration="10000" />
       <workItem from="1546550405693" duration="6340000" />
       <workItem from="1546599725198" duration="2431000" />
-      <workItem from="1546692832123" duration="3374000" />
+      <workItem from="1546692832123" duration="4387000" />
     </task>
     <task id="LOCAL-00001" summary="startup">
       <created>1546467126733</created>
@@ -373,7 +442,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43193000" />
+    <option name="totallyTimeSpent" value="44206000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -386,13 +455,13 @@
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.41954023" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.41954023" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4275862" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.32988507" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.32988507" />
       <window_info anchor="bottom" id="DB Execution Console" order="9" />
       <window_info anchor="bottom" id="TypeScript" order="10" weight="0.32988507" />
       <window_info anchor="bottom" id="Statistic" order="11" />
@@ -503,13 +572,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/node_modules/@types/sequelize/index.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="3897" column="56" selection-start-line="3897" selection-start-column="45" selection-end-line="3897" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/server_files/api/authentication/group.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -565,31 +627,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/token.generator.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="851">
-          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/repositories/base/api.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-            <element signature="e#212#1998#0" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -636,16 +677,6 @@
           <caret line="11" column="102" selection-start-line="11" selection-start-column="102" selection-end-line="11" selection-end-column="102" />
           <folding>
             <element signature="e#0#69#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/server_files/api/authentication/userById.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="14" column="132" selection-start-line="14" selection-start-column="132" selection-end-line="14" selection-end-column="132" />
-          <folding>
-            <element signature="e#0#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -920,16 +951,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/server.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="10" selection-start-line="6" selection-start-column="10" selection-end-line="6" selection-end-column="10" />
-          <folding>
-            <element signature="e#0#36#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/shared/communication/login-result.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -941,6 +962,53 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_files/api/authentication/userById.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="14" selection-start-line="14" selection-end-line="14" selection-end-column="136" />
+          <folding>
+            <element signature="e#0#62#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/repositories/base/api.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="63" column="4" selection-start-line="63" selection-start-column="4" selection-end-line="63" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/token.generator.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="499">
+          <caret line="37" column="32" selection-start-line="37" selection-start-column="32" selection-end-line="37" selection-end-column="32" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="47" column="16" selection-start-line="47" selection-start-column="16" selection-end-line="47" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#36#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/server_files/api/authentication/userByToken.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="1" column="48" selection-start-line="1" selection-start-column="48" selection-end-line="1" selection-end-column="48" />
         </state>
       </provider>
     </entry>

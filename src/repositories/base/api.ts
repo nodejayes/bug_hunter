@@ -61,7 +61,7 @@ export class CrudApi<T extends Model<T>> {
           res.end('Internal Server Error');
         });
     }
-  }
+  };
 
   call(req, res, next, cb, rights = []) {
     let authorized = false;

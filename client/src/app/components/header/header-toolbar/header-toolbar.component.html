@@ -1,3 +1,4 @@
-<p-menubar [model]="items">
-  <button pButton label="Logout" icon="fa fa-sign-out"></button>
+<p-menubar [model]="items" *ngIf="userState.IsAuthenticated">
+  <button pButton label="Abmelden" icon="fa fa-sign-out" (click)="logout()"></button>
 </p-menubar>
+<app-logo *ngIf="!userState.IsAuthenticated"></app-logo>

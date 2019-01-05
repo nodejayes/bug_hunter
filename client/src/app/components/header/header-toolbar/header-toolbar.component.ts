@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MenuItem}            from 'primeng/api';
+import {UserState}           from '../../../states/user';
+import {UserService}         from '../../../backend-api/user.service';
 
 @Component({
   selector: 'app-header-toolbar',
@@ -13,9 +15,13 @@ export class HeaderToolbarComponent implements OnInit {
     {label: 'Settings', icon: 'fa fa-cogs', routerLink: '/settings'},
   ];
 
-  constructor() { }
+  constructor(private _userService: UserService,
+              public userState: UserState) { }
 
   ngOnInit() {
   }
 
+  logout() {
+    this._userService.logout();
+  }
 }

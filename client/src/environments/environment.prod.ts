@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  serverApi: 'http://localhost:8084/api',
+  tokenName: 'bughuntertoken',
 };
