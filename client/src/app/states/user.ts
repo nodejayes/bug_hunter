@@ -37,7 +37,7 @@ export class UserState extends SimpleState<IUserState> {
   }
   set CurrentUser(value: IUser) {
     super.setState('currentUser', value);
-    this.CurrentUser$.next(value);
+    this.CurrentUser$.next(this.CurrentState.currentUser);
   }
 
   get AccessToken(): string {
@@ -55,10 +55,10 @@ export class UserState extends SimpleState<IUserState> {
       }
     }
     super.setState('isAuthenticated', authenticated);
-    this.IsAuthenticated$.next(authenticated);
+    this.IsAuthenticated$.next(this.CurrentState.isAuthenticated);
 
     super.setState('accessToken', value);
-    this.AccessToken$.next(value);
+    this.AccessToken$.next(this.CurrentState.accessToken);
   }
 
   get IsBusy(): boolean {
@@ -66,7 +66,7 @@ export class UserState extends SimpleState<IUserState> {
   }
   set IsBusy(value: boolean) {
     super.setState('isBusy', value);
-    this.IsBusy$.next(value);
+    this.IsBusy$.next(this.CurrentState.isBusy);
   }
 
   get IsAuthenticated(): boolean {

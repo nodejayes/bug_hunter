@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ProjectState}        from '../../../states/project';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(public projectState: ProjectState) { }
 
   ngOnInit() {
   }

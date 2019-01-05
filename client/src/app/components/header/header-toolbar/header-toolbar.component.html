@@ -1,4 +1,7 @@
 <p-menubar [model]="items" *ngIf="userState.IsAuthenticated">
+  <p-dropdown [options]="projectState.Projects$ | async" dataKey="Id" optionLabel="Title"
+              [filter]="true"
+              (onChange)="selectProject($event)"></p-dropdown>
   <button pButton label="Abmelden" icon="fa fa-sign-out" (click)="logout()"></button>
 </p-menubar>
 <app-logo *ngIf="!userState.IsAuthenticated"></app-logo>
